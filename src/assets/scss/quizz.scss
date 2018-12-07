@@ -1,0 +1,43 @@
+body {
+    margin: 0px;
+}
+.quizzC {
+    width: 100%;
+    display: flex;
+    background-color: #bdc3c7;
+    min-height: 30em;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 2em;
+}
+.question {
+    font-size: 3.5em;
+    color: white;
+}
+.answ {
+    min-height: 10em;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
+.answBtn {
+    width: 45%;
+    margin: auto;
+    height: 2em;
+    border-style: none;
+    background-color: #1abc9c;
+    color: white;
+    transition: 0.5s;
+    font-size: 2em;
+}
+.answBtn:hover {
+    transform: scale(1.05)
+}
+.selected {
+    background-color: #16a085;
+}
+.submitBtn {
+    background-color: #018f6b
+}

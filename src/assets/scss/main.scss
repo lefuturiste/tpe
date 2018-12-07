@@ -1,3 +1,12 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/0.6.6/tailwind.min.css");
+@import url("https://use.fontawesome.com/releases/v5.3.1/css/all.css");
+@import url("https://fonts.googleapis.com/css?family=Niramit");
+
+@import "./theme.scss";
+
+html {
+	scroll-behavior: smooth;
+}
 body {
 	font-family: 'Niramit', sans-serif;
 }
@@ -102,3 +111,6 @@ body {
 	height: 16vh;
 	background-color: rgba(22, 160, 133, 0.5);
 }
+
+@import "./quizz.scss";
+@import "./components/button.scss";

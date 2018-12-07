@@ -1,6 +1,17 @@
 <template>
     <div class="quizzC">
-        {{ data[0].question }}
+        <p class="question">{{data[0].question}}</p>
+        <div class="answ">
+            <button
+             v-for='(answer, index) in data[0].answers'
+             :key="index"
+             class="answBtn selected">
+              {{ answer }}
+            </button>
+        </div>
+        <button class="submitBtn">
+        Valider
+        </button>
     </div>
 </template>
 
@@ -8,7 +19,6 @@
 export default {
     name: "Quizz",
     data: () => ({
-        key: 'valeur'
     }),
     props: {
         data: {
@@ -18,13 +28,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-.QuizzC {
-    width: 100%;
-    display: flex;
-    background-color: #95a5a6;
-    min-height: 10em;
-}
-
-</style>
