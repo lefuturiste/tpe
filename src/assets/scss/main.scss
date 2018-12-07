@@ -1,0 +1,104 @@
+body {
+	font-family: 'Niramit', sans-serif;
+}
+.back-cover {
+	height: 100vh;
+	background-image: url('https://i.imgur.com/19ctUK5.jpg');
+	background-size: cover;
+}
+.cover {
+	background-color: rgba(22, 160, 133, 0.5);
+	height: 100vh;
+	margin-top: -100vh;
+	color: white;
+}
+.cover-title-container {
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	height: 80vh;
+	
+}
+.main-title {
+	font-size: 3em;
+}
+.sub-title {
+	font-size: 1.6em;
+	margin-top: 1em;
+	opacity: 0.8;
+	color: #ecf0f1;
+}
+.cover-action-button{
+	height: 10vh;
+
+	display: flex;
+	justify-content: center;
+
+	font-size: 2em;
+	
+	align-items: flex-end;
+	height: 15vh;
+
+}
+.cover-action-button a {
+	color: white;
+	font-size: 1.2em;
+	opacity: 0.6;
+	transition: opacity 0.2s;
+}
+.cover-action-button a:hover {
+	opacity: 1;
+	transition: opacity 0.2s;
+}
+.main {
+	padding-top: 2em;
+	line-height: 2em;
+
+}
+.main h2 {
+	margin-top: 1em;
+	margin-bottom: 0.4em;
+	padding-bottom: 0.2em;
+	border-bottom: 1px solid #bdc3c7;
+	border-radius: 1px;
+}
+.main p {
+	margin-bottom: 0.5em;
+}
+.footer {
+	border-top: 1px solid #bdc3c7;
+}
+.footer-container {
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+.footer-title {
+	margin-bottom: 0.6em;
+}
+.footer-items {
+	margin-left: 1em;
+}
+.footer-items li {
+	margin-bottom: 1em;
+	list-style-type: none;
+}
+.footer-items .fa {
+	color: #2980b9;
+	margin-right: 0.4em;
+}
+
+.footer-cover-back {
+	margin-top: 5em;
+	height: 16vh;
+	background-image: url('https://i.imgur.com/ZSgjJtc.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.footer-cover {			
+	box-shadow: inset 1px 1px 8px #000;
+	margin-top: -16vh;
+	height: 16vh;
+	background-color: rgba(22, 160, 133, 0.5);
+}
