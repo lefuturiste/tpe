@@ -59,7 +59,7 @@ export default {
   data: () => ({
     data: [
       {
-        question: "qestion1",
+        question: "Que pensez vous de ce que vous pensez?",
         answers: [
           "answer1",
           "answer2",

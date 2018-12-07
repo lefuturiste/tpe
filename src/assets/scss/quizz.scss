@@ -21,23 +21,25 @@ body {
     flex-wrap: wrap;
     width: 90%;
     margin: auto;
+    padding: 0em 3em 0em 3em;
 }
 .answBtn {
-    width: 45%;
+    width: 40%;
     margin: auto;
     height: 2em;
     border-style: none;
     background-color: #1abc9c;
     color: white;
     transition: 0.5s;
-    font-size: 2em;
+    font-size: 1.7em;
 }
 .answBtn:hover {
-    transform: scale(1.05)
+    transform: scale(1.05);
+    background-color: $secondary;
 }
 .selected {
-    background-color: #16a085;
+    background-color: white;
 }
 .submitBtn {
-    background-color: #018f6b
+    background-color: $primary;
 }

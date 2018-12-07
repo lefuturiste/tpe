@@ -5,7 +5,7 @@
             <button
              v-for='(answer, index) in data[0].answers'
              :key="index"
-             class="answBtn selected">
+             class="answBtn">
               {{ answer }}
             </button>
         </div>
