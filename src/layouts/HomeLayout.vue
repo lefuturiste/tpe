@@ -11,7 +11,7 @@
           <v-layout align-space-beetween column>
             <v-layout align-center>
               <v-flex text-xs-center class="opacity-50">
-                Créé par Matthieu Bessat, Krifa Mohamed, Buhot Kylian
+                Créé par Matthieu Bessat, Krifa Mohamed-El-Hassan, Buhot Kylian
               </v-flex>
             </v-layout>
             <v-layout align-center fill-height>

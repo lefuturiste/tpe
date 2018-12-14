@@ -1,0 +1,41 @@
+{
+    "questions": [
+        {
+            "text": "This is my question ?",
+            "answers": [
+                {
+                    "text": "Hello this is a answer (valid)",
+                    "isValid": true
+                },
+                {
+                    "text": "Hello this is a answer",
+                    "isValid": true
+                },
+                {
+                    "text": "Hello this is a answer"
+                },
+                {
+                    "text": "Hello this is a answer"
+                }
+            ]
+        },
+        {
+            "text": "This is my question 2 ?",
+            "answers": [
+                {
+                    "text": "Hello this is a answer 2"
+                },
+                {
+                    "text": "Hello this is a answer 2"
+                },
+                {
+                    "text": "Hello this is a answer 2 (valid)",
+                    "isValid": true
+                },
+                {
+                    "text": "Hello this is a answer 2"
+                }
+            ]
+        }
+    ]
+}
