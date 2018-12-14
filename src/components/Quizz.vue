@@ -1,7 +1,6 @@
 <template>
     <v-layout align-center>
-        <div id="timeline-embed"></div>
-        <v-card color="indigo" dark width="100%" class="mb-2">
+        <v-card color="indigo" dark width="100%" class="mb-2" v-if="questions.length !== 0">
             <v-card-title>
                 <v-layout justify-space-between class="headline">
                     <div>{{ questions[current].text }}</div>
@@ -12,9 +11,9 @@
                 <v-list class="questions-list">
                     <v-list-tile v-for="(answer, index) in questions[current].answers" :key="index">
                         <v-list-tile-action>
-                            <v-checkbox color="white" v-model="answer.toggled" />
+                            <v-checkbox color="white" v-model="answers[index]" />
                         </v-list-tile-action>
-                        <v-list-tile-content>
+                        <v-list-tile-content @click="answers[index] = !answers[index]" ripple>
                             <v-list-tile-title>
                                 {{ answer.text }}
                             </v-list-tile-title>
@@ -37,19 +36,14 @@ export default {
         questions: [],
         score: 0,
         scoreByQuestion: 0,
-        current: 0
+        current: 0,
+        answers: []
     }),
     mounted () {
         let config = require('../assets/quizzs/' + this.src + '.json')
-        this.questions = config.questions
-        this.questions = this.questions.map(question => {
-            question.answers = question.answers.map(answer => {
-                answer.toggled = false
-                return answer
-            })
-            return question
-        })
+        this.questions = config.questions        
         this.scoreByQuestion = 20 / this.questions.length
+        this.refresh()
     },
     props: {
         src: {
@@ -58,14 +52,19 @@ export default {
         }
     },
     methods: {
+        refresh: function () {
+            this.answers = this.questions[this.current].answers.map(answer => {
+                return false
+            })
+        },
         validate: function () {
             let maxValid = 0
             let correctAnswer = 0
-            this.questions[this.current].answers.forEach(answer => {
+            this.questions[this.current].answers.forEach((answer, index) => {
                 if (answer.isValid) {
                     maxValid++
                 }
-                if (answer.toggled) {
+                if (this.answers[index]) {
                     correctAnswer++
                 }
             });
@@ -73,14 +72,8 @@ export default {
             if (correctAnswer === maxValid) {
                 this.score += this.scoreByQuestion
             }
-            //this.resetAnswerState()
+            this.refresh()
             this.current++
-        },
-        resetAnswerState: function () {
-            this.questions.answers = this.questions[this.current].answers.map(answer => {
-                answer.toggled = false
-                return answer
-            })
         }
     }
 }
