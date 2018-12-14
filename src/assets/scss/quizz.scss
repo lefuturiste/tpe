@@ -26,16 +26,10 @@ body {
 .answBtn {
     width: 40%;
     margin: auto;
-    height: 2em;
-    border-style: none;
-    background-color: #1abc9c;
-    color: white;
-    transition: 0.5s;
-    font-size: 1.7em;
+    height: 3em;
 }
 .answBtn:hover {
     transform: scale(1.05);
-    background-color: $secondary;
 }
 .selected {
     background-color: white;

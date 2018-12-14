@@ -1,4 +1,31 @@
 .button {
-    // bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded
-    @extend bg-blue !optional;
+  // bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @extend .bg-blue;
+  &:hover {
+    @extend .bg-blue-dark;
+  }
+  @extend .text-white;
+  @extend .font-bold;
+  @extend .py-2;
+  @extend .px-4;
+  @extend .rounded;
+}
+
+.button-primary {
+  background-color: $primary;
+  transition: background-color 0.2s;
+  &:hover {
+    background-color: $secondary;
+    transition: background-color 0.2s;
+  }
+}
+
+.button-lg {
+  font-size: 1.5em;
+  @extend .py-4;
+  @extend .px-6;
 }

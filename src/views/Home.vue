@@ -1,73 +1,16 @@
 <template>
-  <div class="home">
-    <div class="back-cover">
-		</div>
-		<div class="cover">
-
-			<div class="cover-title-container">
-				<div>
-					<h1 class="main-title">Transition énergétique</h1>
-					<h2 class="sub-title">Vers un mix énergétique 100% renouvelable ?</h2>				
-				</div>
-			</div>
-			<div class="cover-action-button">
-				<a href="#main" class="cover-button">
-					<i class="fas fa-arrow-circle-down"></i>
-				</a>
-			</div>
-		</div>
-		<div class="main" id="main">		
-			<div class="content container mx-auto">
-				<h2>A title </h2>
-				<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat</p>
-				<h2>A title </h2>
-				<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat</p>
-			</div>
-      
-      <Quizz :data="data" class="mt-8" />
-		</div>	
-		<div class="footer-cover-back">
-		</div>
-		<div class="footer-cover">
-		</div>
-		<div class="footer">
-			<div class="footer-container flex container mx-auto">
-				<div class="w-1/2">
-				<h3 class="footer-title">Vers un mix énergétique 100% renouvelable ?</h3>
-				<p class="footer-description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-				</div>
-				<div class="w-1/2">
-					<ul class="footer-items">
-						<li><i class="fa fas fa-graduation-cap"></i> Lycée André Malraux</li>
-						<li><i class="fa fas fa-file-alt"></i> TPE 1ère S</li>
-						<li><i class="fa fas fa-user"></i> Matthieu Bessat, Mohamed Krifa, Buhot Kilian</li>
-					</ul>
-				</div>
-			</div>
-		</div>
+  <div>
+    <div class="display-3 mb-4">Transition énergétique</div>
+    <div class="headline mb-4">Vers un mix énergétique 100% renouvelable ?</div>
+    <v-btn outline dark large ripple class="mt-4" @click="$router.push('/history')">Démarrer l'expérience</v-btn>
   </div>
 </template>
 
 <script>
 
-import Quizz from "../components/Quizz.vue"
+import CenterLayout from "../layouts/CenterLayout"
 export default {
   name: 'home',
-  components: {
-    Quizz
-  },
-  data: () => ({
-    data: [
-      {
-        question: "Que pensez vous de ce que vous pensez?",
-        answers: [
-          "answer1",
-          "answer2",
-          "answer3",
-          "answer4"
-        ],
-      }
-    ]
-  })
+  components: {CenterLayout}
 }
 </script>

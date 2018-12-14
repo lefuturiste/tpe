@@ -3,14 +3,13 @@
         <p class="question">{{data[0].question}}</p>
         <div class="answ">
             <button
-             v-for='(answer, index) in data[0].answers'
-             :key="index"
-             class="answBtn">
+                class="button answBtn"
+                v-for='(answer, index) in data[0].answers'
+                :key="index">
               {{ answer }}
             </button>
         </div>
-        <button class="submitBtn">
-        Valider
+        <button class="button">Valider
         </button>
     </div>
 </template>
