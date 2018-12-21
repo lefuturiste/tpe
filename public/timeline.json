@@ -1,0 +1,18 @@
+{
+    "title": {
+        "text": {
+            "headline": "An great example",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        }
+    },
+    "events": [
+        {
+            "start_date": {
+                "year": "2002"
+            },
+            "text": {
+                "headline": "An great event"
+            }
+        }
+    ]
+}

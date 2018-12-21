@@ -11,9 +11,9 @@
                 <v-list class="questions-list">
                     <v-list-tile v-for="(answer, index) in questions[current].answers" :key="index">
                         <v-list-tile-action>
-                            <v-checkbox color="white" v-model="answers[index]" />
+                            <v-checkbox color="white" v-model="answers" />
                         </v-list-tile-action>
-                        <v-list-tile-content @click="answers[index] = !answers[index]" ripple>
+                        <v-list-tile-content @click="toggle(index)" ripple>
                             <v-list-tile-title>
                                 {{ answer.text }}
                             </v-list-tile-title>
@@ -52,6 +52,10 @@ export default {
         }
     },
     methods: {
+        toggle: function (index) {
+            console.log( this.answers[index])
+            this.answers[index] = !this.answers[index]
+        },
         refresh: function () {
             this.answers = this.questions[this.current].answers.map(answer => {
                 return false

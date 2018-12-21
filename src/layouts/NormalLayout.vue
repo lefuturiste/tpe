@@ -5,9 +5,7 @@
       <v-toolbar-title>Title</v-toolbar-title>
       <v-spacer></v-spacer>
     </v-toolbar>
-    <v-container>
-      <slot />
-    </v-container>
+    <slot />
     <v-navigation-drawer
       v-model="drawer"
       absolute
