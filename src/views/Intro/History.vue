@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-stepper-content step="1">
     <div id="timeline" class="timeline-container">
       <embed src="/timeline.html" class="timeline" />
     </div>
@@ -13,11 +13,12 @@
         >Next <v-icon right>keyboard_arrow_right</v-icon></v-btn>
       </v-layout>
     </v-container>
-  </div>
+  </v-stepper-content>
 </template>
 <script>
-  import Quizz from "../components/Quizz"
+  import Quizz from "../../components/Quizz"
   export default {
+    name: 'History',
     components: {
       Quizz
     }

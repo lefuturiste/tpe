@@ -6,7 +6,7 @@
       </component>
     </v-fade-transition>
   </v-app>
-</template>
+</template>b
 
 <script>
 import ScaleTransition from "vue2-transitions/src/Scale/ScaleTransition"

@@ -1,6 +1,6 @@
 <template>
   <v-content>
-    <v-toolbar>
+    <v-toolbar color="primary" flat>
       <!--<v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>-->
       <v-toolbar-title>Title</v-toolbar-title>
       <v-spacer></v-spacer>
