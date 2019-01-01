@@ -19,4 +19,7 @@
     .tl-attribution {
         display: none !important;
     }
+    #timeline-embed {
+        z-index: 0;
+    }
 </style>

@@ -7,11 +7,7 @@
 </template>
 
 <script>
-  import Quizz from "../../components/Quizz"
   export default {
-    name: 'History',
-    components: {
-      Quizz
-    }
+    name: 'History'
   }
 </script>
