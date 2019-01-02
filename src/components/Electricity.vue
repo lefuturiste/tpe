@@ -8,7 +8,7 @@
 				<div class="circuitContent">
 					<div class='cable'>
 						<div class="electronC">
-							<template v-for="i in 5">
+							<template v-for="i in 5" :key="i">
 								<v-tooltip top>
 									<div class="electron" slot="activator">
 										<div class="moin">

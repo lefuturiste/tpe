@@ -3,7 +3,7 @@
 		<v-layout>
 			<v-flex xs1 class="sideBtnC">
 				<v-item-group v-model="window" class="shrink mr-4 item" mandatory tag="v-flex">
-					<v-item v-for='p in parts' :key="i">
+					<v-item v-for='p in parts' :key="p.name">
 						<div slot-scope="{ active, toggle }" >
 						<v-tooltip right>
 							<v-btn :input-value="active" @click="toggle" icon slot="activator">
@@ -41,8 +41,8 @@
 		data: () => ({
 			window: 0,
 			parts: [
+				{ name: 'Bienvenue' },
 				{ name: 'Introduction' },
-				{ name: 'Partie 1' },
 				{ name: 'Partie 2' },
 				{ name: 'Partie 3' },
 				{ name: 'Partie 4' },
