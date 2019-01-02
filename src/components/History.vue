@@ -8,7 +8,7 @@
   </v-stepper-content>
 </template>
 <script>
- import Timeline from "../../components/timeline/Timeline"
+ import Timeline from "./timeline/Timeline.vue"
   export default {
     name: 'History',
     components: {

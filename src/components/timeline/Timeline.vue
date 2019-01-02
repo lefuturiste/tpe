@@ -20,6 +20,6 @@
         display: none !important;
     }
     #timeline-embed {
-        z-index: 0;
+        z-index: 1;
     }
 </style>

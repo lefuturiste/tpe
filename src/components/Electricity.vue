@@ -1,4 +1,5 @@
 <template>
+  <v-stepper-content step="2">
 	<v-container class="schemaC">
 		<v-layout>
 			<v-flex xs9 class='circuitC'>
@@ -37,6 +38,7 @@
 			</v-flex>
 		</v-layout>
 	</v-container>
+	</v-stepper-content>
 </template>
 
 <script>

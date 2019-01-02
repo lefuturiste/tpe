@@ -5,10 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    steps: [],
-    bigParts: [
-      { title: "Introduction", subParts: [{ title: "Histoire", location: "/intro/history" }, { title: "Random", location: "/intro/random"}]}
-    ]
+    window : 0
   },
   mutations: {
 

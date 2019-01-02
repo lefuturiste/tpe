@@ -8,9 +8,7 @@
 
 <script>
 
-import CenterLayout from "../layouts/CenterLayout"
 export default {
-  name: 'home',
-  components: {CenterLayout}
+  name: 'home'
 }
 </script>
