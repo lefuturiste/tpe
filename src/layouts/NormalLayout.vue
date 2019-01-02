@@ -48,7 +48,7 @@
   export default {
     name: 'NormalLayout',
     data: () => ({
-      drawer: true,
+      drawer: false,
       bigParts: [],
       persons:[
         {name: "Kylian", avatar: "https://randomuser.me/api/portraits/men/85.jpg"},
