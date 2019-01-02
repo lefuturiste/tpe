@@ -5,7 +5,21 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    window : 0
+    window : 0,
+    parts: {
+      introduction : {
+        subParts: []
+      },
+      partie1: {
+        subParts: []
+      },
+      partie2: {
+        subParts: []
+      },
+      partie3: {
+        subParts: []
+      },
+    }
   },
   mutations: {
 

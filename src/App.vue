@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app id="app">
     <v-fade-transition mode="out-in">
       <component v-bind:is="$route.meta.layout">
         <router-view/>

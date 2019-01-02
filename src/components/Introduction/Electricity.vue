@@ -1,14 +1,40 @@
 <template>
-  <v-stepper-content step="2">
 	<v-container class="schemaC">
-		<v-layout>
+		<v-card light class="ma-5 pa-5 justify-space-between align-content-space-" v-show="!isVisible">
+			<v-card-title class='headline'>Définition</v-card-title>
+			<v-card-text class='subheading'>
+				L’électricité est l'effet du déplacement de particules chargées, à l’intérieur d'un « conducteur », sous l'effet d'une
+				différence de potentiel aux extrémités de ce conducteur. Ce phénomène physique est présent dans de nombreux contextes :
+				l'électricité constitue aussi bien l'influx nerveux des êtres vivants que les éclairs d'un orage. Les découvertes des
+				lois naturelles d'électricité ont conduit à l'électrotechnique, et les inventions de l'électrotechnique sont largement
+				utilisées dans les sociétés développées pour par exemple transporter de grandes quantités d'énergie facilement
+				utilisables.
+				
+				Les propriétés de l'électricité ont été découvertes au cours du XVIIIe siècle. La maîtrise du courant électrique a
+				permis l'avènement de la seconde révolution industrielle. Aujourd'hui, l'énergie électrique est omniprésente dans les
+				pays industrialisés : à partir de différentes sources d'énergie, principalement hydraulique, thermique et nucléaire,
+				l'électricité est un vecteur énergétique employé pour de très nombreux usages domestiques ou industriels.
+			</v-card-text>
+			<v-card-actions>
+				<v-btn large block color="success" @click="isVisible = true">Schéma interactif</v-btn>
+			</v-card-actions>
+		</v-card>
+		<v-layout v-show="isVisible" wrap>
+			<v-flex xs12>
+				<v-system-bar window class="bar">
+					<v-spacer></v-spacer>
+					<v-icon>remove</v-icon>
+					<v-icon>check_box_outline_blank</v-icon>
+					<v-btn icon @click="isVisible = false" class="ma-0 pa-0 pl-2"><v-icon>close</v-icon></v-btn>
+				</v-system-bar>
+			</v-flex>
 			<v-flex xs9 class='circuitC'>
-					<span style="font-weight:1000; font-size: 1.5em">Intensité: {{ intensity }}A</span>
+					<span class="black--text title">Intensité: {{ intensity }}A</span>
 				<div class="circuit"></div>
 				<div class="circuitContent">
 					<div class='cable'>
 						<div class="electronC">
-							<template v-for="i in 5" :key="i">
+							<template v-for="i in 5">
 								<v-tooltip top>
 									<div class="electron" slot="activator">
 										<div class="moin">
@@ -38,14 +64,17 @@
 			</v-flex>
 		</v-layout>
 	</v-container>
-	</v-stepper-content>
 </template>
 
 <script>
 	export default {
 		name: 'electicity',
+		mounted () {
+			this.$store.state.parts.introduction.subParts[1] = "Qu'est ce que l'éléctricité ?"
+		},
 		data: () => ({
-			intensity: 2
+			intensity: 2,
+			isVisible: false
 		}),
 		methods: {
 			changeI() {
@@ -76,12 +105,12 @@
 		height: 60vh;
 		display: flex;
 		background-color: #e2e2e2;
-		border-radius: 30px 0px 0px 30px;
+		border-radius: 0px 0px 0px 10px;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
 		overflow: hidden;
-		border-color: #4d4d4d;
+		border-color: rgb(31, 31, 31);
 		border-style: solid;
 		border-width: 1em;
 	}
@@ -134,11 +163,13 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: start;
-		background-color: #4d4d4d;
-		border-radius: 0px 30px 30px 0px;
+		background-color: rgb(31, 31, 31);
+		border-radius: 0px 0px 10px 0px;
 		z-index: 2;
 	}
-
+	.bar {
+		border-radius: 10px 10px 0px 0px;
+	}
 	.schemaC {
 		width: 700em;
 		height: 400em;
