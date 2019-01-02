@@ -1,7 +1,7 @@
 <template>
 	<v-container fluid color="primary" pa-0>
 		<v-layout>
-			<v-flex xs1 class="sideBtnC">
+			<v-flex xs1 id="sideBtnC">
 				<v-item-group v-model="window" class="shrink mr-4 item" mandatory tag="v-flex">
 					<v-item v-for='p in parts' :key="p.name">
 						<div slot-scope="{ active, toggle }" >
@@ -50,17 +50,30 @@
 		}),
 		components: {
 			Welcome
+		},
+		watch: {
+			window: (val, oldVal) => {
+				switch (val) {
+					case 0:
+						document.getElementById("sideBtnC").style.backgroundColor = '#009688'
+						break;
+					case 1:
+						document.getElementById("sideBtnC").style.backgroundColor = 'purple'
+						break;
+				}
+			}
 		}
 	}
 </script>
 
 <style>
-	.sideBtnC {
+	#sideBtnC {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		background-color: #009688;
 		height: 100vh;
+		transition: 1s;
 	}
 
 	.icn {
