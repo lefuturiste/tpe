@@ -2,6 +2,7 @@
 	<v-container class="schemaC">
 		<v-layout>
 			<v-flex xs9 class='circuitC'>
+					<span style="font-weight:1000; font-size: 1.5em">Intensité: {{ intensity }}A</span>
 				<div class="circuit"></div>
 				<div class="circuitContent">
 					<div class='cable'>
@@ -22,7 +23,7 @@
 			</v-flex>
 			<v-flex xs3 class='sideMenu'>
 				<div>
-					<span style="font-size: 1.2em; color: white">Intensitée:</span>
+					<span style="font-size: 1.2em; color: white">Intensité:</span>
 					<v-tooltip top>
 						<v-icon slot="activator" color="primary" dark>info</v-icon>
 						<span>L'intensité du courant électrique peut être assimilée au débit d'eau dans un tuyau. Elle rend compte
@@ -30,7 +31,7 @@
 							mesurée
 							en ampères (A)</span>
 					</v-tooltip>
-					<v-slider v-model="intensity" step="1" thumb-label ticks max="10" min="1" @change="changeI()"></v-slider>
+					<v-slider v-model="intensity" step="1" thumb-label ticks max="10" min="1"></v-slider>
 					</v-slider>
 				</div>
 			</v-flex>
@@ -52,6 +53,9 @@
 					el.style.animationDuration = (1 / this.intensity) + "s"
 				}
 			}
+		},
+		watch:{
+			intensity: "changeI"		
 		}
 	}
 </script>
@@ -84,7 +88,7 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		justify-content: space-between
+		justify-content: flex-start;
 	}
 
 	.electron {
@@ -94,6 +98,7 @@
 		height: 35px;
 		position: relative;
 		animation: elecMove 1s infinite linear;
+		margin-right: 165px;
 	}
 
 	.cable {
@@ -143,7 +148,7 @@
 		}
 
 		to {
-			left: 165px;
+			left: 200px;
 		}
 	}
 </style>
