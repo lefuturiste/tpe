@@ -37,7 +37,7 @@
 			subParts: []
 		}),
 		mounted () {
-			this.subParts = this.$store.state.parts.partie1.subParts
+			this.subParts = this.$store.state.parts.partie2.subParts
 		},
 		components: {
 			SubPart1,

@@ -76,13 +76,13 @@
 						document.getElementById("app").style.backgroundColor = '#009688'
 						break;
 					case 1:
-						document.getElementById("app").style.backgroundColor = '#6d22c9'
+						document.getElementById("app").style.backgroundColor = '#00B8D4'
 						break;
 					case 2:
-						document.getElementById("app").style.backgroundColor = 'red'
+						document.getElementById("app").style.backgroundColor = '#EF5350'
 						break;
 					case 3:
-						document.getElementById("app").style.backgroundColor = 'green'
+						document.getElementById("app").style.backgroundColor = '#7CB342'
 						break;
 					case 4:
 						document.getElementById("app").style.backgroundColor = 'orange'

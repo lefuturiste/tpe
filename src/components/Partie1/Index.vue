@@ -1,20 +1,22 @@
 <template>
 	<v-card flat dark class="transparent main">
-		<div>
-		<v-card-text class='display-3 ma-0 pt-4 pa-0'>Partie1</v-card-text>
-		<v-card-text class='headline ml-4 pa-0 ma-0'>{{ subParts[part]}}</v-card-text>
-		</div>
-		<v-window v-model="part" flat>
-			<v-window-item key='1'>
-			<SubPart1/>
+		<v-card-text>
+			<div>
+				<span class='display-3 ma-0 pt-4 pa-0'>{{ subParts[part]}}</span> - <span class="heading" style="text-transform: uppercase">Introduction</span>
+			</div>
+			<v-window v-model="part" flat>
+				<v-window-item key='1'>
+					<SubPart1/>
+				</v-window-item>
+				<v-window-item key='2'>
+					<SubPart2/>
+				</v-window-item>
+				<v-window-item key='3'>
+					<SubPart3/>
 			</v-window-item>
-			<v-window-item key='2'>
-			<SubPart2/>
-			</v-window-item>
-			<v-window-item key='3'>
-			<SubPart3/>
-			</v-window-item>
-		</v-window>
+		</v-window>	
+		</v-card-text>
+		
 		<v-card-actions class="justify-center pb-5 botBtn" flat>
 			<v-item-group v-model="part" class="text-xs-center" mandatory>
 				<v-item v-for="p in subParts" :key="p">

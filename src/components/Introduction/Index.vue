@@ -48,7 +48,6 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	overflow: hidden;
 }
 .botBtn {
 	position: absolute;
